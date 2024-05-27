@@ -10,7 +10,7 @@
  => Constraints: Only 4 complex multiplers are allowed. (Hardware Constraint)
 
  => A complex multiplier, does a complex multiplication between two complex points and produce resulting real part and complex part
- => Complex points multiplication : (a1 + jb1) * (a2 +j b2) = (a1*a2 - b1*b2) + j (a1*b2 + a2*b1), has two addition/subtraction and 4 multipliers.
+ => Complex points multiplication : (a1 + jb1) * (a2 +j b2) = (a1.a2 - b1.b2) + j (a1.b2 + a2.b1), has two addition/subtraction and 4 multipliers.
 
  => The multiplication/summations should be carried in 8.15 through the FFT for enough range at the end.
  => In a traditional 128-bit radix 2 DIT FFT, There are 7 levels, each requiring 64 complex multiplies and 128 complex adds. This would require 64*7 complex multipliers (Each complex multiply requires 4 
