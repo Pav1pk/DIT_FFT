@@ -1,3 +1,10 @@
+/*
+----------------------------------------------------------------------------
+-> This a sequencer class for connecting the sequence object with the Driver.
+-> Used as a connection between sequence and driver, for handling the handshake signals and passing the msg.
+-----------------------------------------------------------------------------
+*/
+
 class sequencer_G10 extends  uvm_sequencer #(sequence_item_G10);
  
  `uvm_component_utils (sequencer_G10)
