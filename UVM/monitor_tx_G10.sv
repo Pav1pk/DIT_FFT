@@ -1,3 +1,20 @@
+/*
+------------------------------------------------------------------------------------------------------------------------------------
+-> This is a monitor , monitoring the "DUT" for sending the Dut's output to the scoreboard, synchronously.
+
+-> It has two ports:
+			i)  tlm_anlaysis_fifo port for collecting the 48 bits from the DUT (virtual Interface).
+			ii) analysis Port for sending the 48 bits to the scoreboard..
+
+-> It has a virtual interface, connecting the global conifg interface for monitoring the interface port signals.
+
+-> The monitor collects the output from the DUT (in the Interface).
+
+-> Whenver it sees a reset signal, it sends zero signal to the scoreboard.
+
+-> Whenever the monitor sees a pushout signal from the dut, the 48 bit element is sent/written it to the scoreboard.
+------------------------------------------------------------------------------------------------------------------------------------
+*/
 class monitor_dut_to_scoreboard extends  uvm_monitor;
 
 	virtual intf_Driver_DUT intf_DUT_Monitor;
