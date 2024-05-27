@@ -1,3 +1,20 @@
+/*
+-------------------------------------------------------------------------------------------------------
+-> This is an agent, precisely passive agent, extending uvm_agent.
+
+-> This agent builds: 
+					i)    a Bit reversal block for reference fft Design
+					ii)   a Reference FFT Design.
+					iii)  a Reference FFT Design's Decoder.
+					iv)   a reference monitor
+
+-> Connnects :
+			i)   reference bit reversal and reference fft design.
+			ii)  reference fft Design and reference Decoder.
+			iii) reference Decoder and reference monitor.
+
+-------------------------------------------------------------------------------------------------------
+*/
 class Passive_Agent extends  uvm_agent;
 	`uvm_component_utils(Passive_Agent)
 
