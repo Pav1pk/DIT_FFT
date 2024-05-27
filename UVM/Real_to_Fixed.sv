@@ -1,3 +1,11 @@
+// -------------------------------------------------------------------------------------------------
+/* 
+ -> This is a box, extending uvm_scorebard (i.e., an uvm Component).
+ -> Used for converting the 128 floating points into 128 fixed points.
+-> The IFFT passess the 128 floating points into this box, and it generates 128 fixed point values.
+
+*/
+// --------------------------------------------------------------------------------------------------
 class Real_to_Fixed extends uvm_scoreboard;
 	`uvm_component_utils (Real_to_Fixed)
 
