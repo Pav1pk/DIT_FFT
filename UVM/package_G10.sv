@@ -1,3 +1,7 @@
+/* 
+-> Package which includes all the files, for building in "top_down_ format"
+*/
+
 package package_G10;
 import uvm_pkg::*;
 
