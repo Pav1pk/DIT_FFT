@@ -29,8 +29,7 @@
 
 This repository consists of:
 
-i) Design_Files  
-ii) Synthesis
+i) Design_Files  ii) Synthesis
 iii) UVM
 iV) Specifications.pdf
 
