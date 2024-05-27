@@ -1,3 +1,9 @@
+// -------------------------------------------------------------------------------------------
+/*
+These are the data types defined, used for the whole project,
+used in the port data types, etc/.... for passing the messages fluently
+*/
+// ---------------------------------------------------------------------------------------
 typedef struct {
 		real real_part;
 		real imaginary_part;
