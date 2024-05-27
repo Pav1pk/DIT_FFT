@@ -1,3 +1,11 @@
+/* 
+-------------------------------------------------------------------------
+-> This is a sequence item class
+-> The message / packet for passing the information through the blocks, throughout the Flow.
+-> This sequence item is used for randomizing the input 48 bits, which is required for generation of 128 points for the FFT/IFFT. 
+-> The other data items in the sequence item are used in the driver for controlling the sequential inputs to the Device Under Test
+ ----------------------------------------------------------------------- 
+ */
 class sequence_item_G10 extends  uvm_sequence_item;
 
 	`uvm_object_utils(sequence_item_G10)
