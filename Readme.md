@@ -27,11 +27,10 @@
 
 // --------------------------------------------------------------------------------------------------------------------- //
 This repository consists of:
--> Design_Files  
-
--> Synthesis
--> UVM
--> Specifications.pdf
+i) Design_Files  
+ii) Synthesis
+iii) UVM
+iV) Specifications.pdf
 
 a) Design Files : 
        i)   It consists of all the files required for a working design.
