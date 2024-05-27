@@ -1,3 +1,15 @@
+/*
+-------------------------------------------------------------------------------------------------------
+-> This is bit reversal box, which extends "uvm_scoreboard"
+-> This consists of two ports:
+							i)  tlm analysis fifo port for collecting the 128 floating frequency bins, from the encoder (or) Driver {For the FFT Reference}.
+							ii)  analysis port for sending the reversed 128 floating frequency bins, to the IFFT Block / FFT Block.
+
+-> This box converts the 128 frequency bins into other 128 frequency bins,of which the indexes are reversed 
+		and updated the destination (output 128 frequency bins) index with the value at reversed index of the source (input 128 frequency bins)
+--------------------------------------------------------------------------------------------------------
+*/
+
 class bit_reversal_G10 extends  uvm_scoreboard;
 	`uvm_component_utils (bit_reversal_G10)
 
