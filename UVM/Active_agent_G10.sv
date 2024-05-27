@@ -1,3 +1,26 @@
+/*
+-------------------------------------------------------------------------------------------------------
+-> This is an agent, precisely an Active agent, extending uvm_agent.
+
+-> This agent builds: 
+					i)     a sequencer box.
+					ii)    a Agent_Driver box.
+					iii)   a Agent_Encoder for ifft Design box.
+					iv)    a Agent_bit reversal box.
+					v)    a Agent_IFFT Design box.
+					vi)     a Agent_real_to_fixed point converted box.
+					vii)    a Agent_monitor_DUT box for monitoring DUT
+-> Connnects :
+          				i) Driver and Sequencer
+          				ii)    Driver and encoder
+					   iii)   encoder and bit reversal
+						iV)    bit reversal and ifft
+				       V)     ifft and driver
+				      vi)    driver and real_to_fixed
+				      Vii)   real_to_fixed and driver
+		
+-------------------------------------------------------------------------------------------------------
+*/
 class Active_agent_G10 extends  uvm_agent;
 	`uvm_component_utils (Active_agent_G10)
 
