@@ -1,3 +1,4 @@
+/*
 ------------------------------------------------------------------------------------------------------------------------------------
 -> This is a ScoreBoard , extending the uvm_scoreboard. For comparing the received bits from two monitors.
 
