@@ -1,3 +1,24 @@
+/*
+------------------------------------------------------------------------------------------------------------------------------------
+-> This is a monitor , monitoring the "reference model" for sending the reference output to the scoreboard, synchronously.
+
+-> It has two ports:
+			i)  tlm_anlaysis_fifo port for collecting the 48 bits from the decoder.
+			ii) analysis Port for sending the 48 bits to the scoreboard..
+
+-> It has a virtual interface, connecting the global conifg interface for monitoring the interface port signals.
+
+-> There is a memory block for storing the received 48 bits from the decoder.
+
+-> The monitor collects the output from the decoder, whenver it sees a First Data and store it in its memory.
+
+-> Any Where in the sequence, if it monitors a reset signal, it flushes the stored memory. 
+
+->  stack of memory for storing the inputs if any asynchronous reset is monitored it flushes the memory...
+
+-> Whenever the monitor sees a pushout signal from the dut, it pops one 48 bit element from the memory and sends/writes it to the scoreboard.
+------------------------------------------------------------------------------------------------------------------------------------
+*/
 class monitor_reference_to_scoreboard extends  uvm_monitor;
 	virtual intf_Driver_DUT intf_FFT_to_DUT_Monitor;
 
