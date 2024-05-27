@@ -1,0 +1,19 @@
+set link_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25 /apps/synopsys/PrimeTimeNew/pts/Q-2019.12/libraries/syn/dw_foundation.sldb}
+set target_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25}
+suppress_message { UID-401 VER-130 }
+
+read_sverilog /home/016761498@SJSUAD.SJSU.EDU/EE_287/Test_Bench/DESIGN_FFT.sv
+current_design DESIGN_FFT 
+create_clock clk -name clk -period 2.5
+set_propagated_clock clk
+set_clock_uncertainty 0.25 clk
+set_fix_hold clk
+compile_ultra
+report_cell
+report_net
+update_timing
+report_timing -max_paths 3 >> DESIGN_FFT_report_timing_with_scan.txt 
+report_area >> DESIGN_FFT_report_area_with_scan.txt
+report_power >> DESIGN_FFT_report_power_with_scan.txt
+write -hierarchy -format verilog -output DESIGN_FFT_netlist.v
+quit
