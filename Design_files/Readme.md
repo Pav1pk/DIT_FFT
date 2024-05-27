@@ -15,7 +15,15 @@ DESIGN.sv: The Design for the FFT.
 
 **complex_multiplier.sv** <br/> It is the modified complex multiplier used for supporting this design; the complex multiplier takes 2 input points, 1 twiddle factor, and produces 2 output points.<br/> The input points, twiddle factor, and output points are all complex. <br/> The module multiplies the twiddle factor with one input point, and the resulting complex number is added and subtracted with another input point to produce two output points, respectively.
 
-**fftw.sv** <br/> It is the twiddle factor function, consisting of all 64 twiddle factors used in this 128 point fft, and accessed them using their indexes respectively.
+**fftw.sv** <br/> It is the twiddle factor function, consisting of all 64 twiddle factors used in this 128 point fft, and accessed them using their indexes respectively. 
+
+// -------------------------------------------------------------------------------------------------------------------------- //
+
+**DESIGN.sv** <br/> i) This is the design for doing the FFT operation
+<br/> ii)  The design receives each point sequentially.
+<br/> iii) The design consists of three state machines: collect_states, fft_states, and decoder_states.
+<br/> iV)  The above state machines operates individually, upon their respective constraints.
+
 
 
 
