@@ -25,7 +25,7 @@ DESIGN.sv: The Design for the FFT.
 <br/> iV)  The above state machines operate individually, upon their respective constraints.
 <br/>    a) collect_states: It has two states in it, First is an IDLE state, and the other is SAMPLING (It keeps on collecting data @ each clock edge with sign extension, and once it reaches 128 points, it reverses the data and sends it to the "fft_states" state machine's register. 
 <br/>    b) fft_states: It Consists of 9 states, one for IDLE, 7 states == 7 levels, and one for output to the decoder.
-<br/>              functionality: Once the fft receives the 128 points from the collect states, it does the butterfly computation, and for completing one level it takes 16 clocks (until k =16), and at each clock (k) it process/computes 8 points (4 complex multiplication).
+<br/>              ***functionality:*** Once the fft receives the 128 points from the collect states, it does the butterfly computation, and for completing one level it takes 16 clocks (until k =16), and at each clock (k) it process/computes 8 points (4 complex multiplication).
 
 
 
