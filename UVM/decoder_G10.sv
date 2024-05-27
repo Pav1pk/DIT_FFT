@@ -1,3 +1,27 @@
+/*
+--------------------------------------------------------------------------------------------
+-> It is decoder box, which extends "uvm_scoreboard".
+
+-> This box conists fot two ports , 
+                i)  The tlm analysis fifo for receiving the sequence item message from the FFT Box.
+                ii)  The analysis port for sending 48 bits decoder output to the reference monitor.
+
+-> This decoder receives the 128 frequency bins and decodes them and slice into corresponding 48 bits.
+
+-> This decoder first calculate the max magnitude by comparing the frequency of bin 55 and bin 57.
+
+-> According to the max values, three decision points are calculated.
+
+->  The magnitude is maintained in square values, rather than sqaure roooting them'
+
+-> Each frequency bins magintude is computed, and compared with the decision points and corresponding 2 bits are stored.
+
+-> 24 bins are computed and 48 bits are generated.
+
+-> These 48 bits are passed to the reference monitor.
+-----------------------------------------------------------------------------------------------
+*/
+
 class decoder_G10 extends  uvm_scoreboard;
 	`uvm_component_utils (decoder_G10)
 
