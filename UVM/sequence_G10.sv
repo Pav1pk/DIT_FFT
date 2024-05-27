@@ -1,3 +1,12 @@
+/*
+----------------------------------------------------------------------------------------
+-> This is a sequence class, used for generating random sequences
+-> It contains a sequence item in the name of "msg".
+-> This sequence uses the sequence item message and reuse it and randomly generates 48 bits which are passed to the driver.
+-> Initial 5 sequence stimulus are applied and next 50,000 sequence are randmonly generated.
+-----------------------------------------------------------------------------------------
+*/
+
 class sequence_G10 extends  uvm_sequence #(sequence_item_G10);
 	`uvm_object_utils (sequence_G10)
 
