@@ -5,7 +5,7 @@
 -> Used for Creating a Global Config space for connecting the Verification Boxes and DUT Virtually..
 ----------------------x------------------------------------------x-------------------------
 
-*
+*/
 
 `timescale  1ps/1fs;
 
