@@ -1,3 +1,11 @@
+// ---------------------------------------------------------------------------
+
+/*
+-> This is Test Component extending uvm_test, for testing the dut by starting the sequence.
+-> This Test Box contatins an Environment and a sequence block(s) in it.
+*/
+
+//-------------------------------------------------------------------------------
 class Test_G10 extends  uvm_test;
 	`uvm_component_utils (Test_G10)
 
