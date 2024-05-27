@@ -33,17 +33,17 @@ i) Design_Files  ii) Synthesis
 iii) UVM
 iV) Specifications.pdf
 
-a) Design Files : 
+**a) Design Files :** 
        i)   It consists of all the files required for a working design.
        ii)  Check the Design's readme for functionality.
-b) Synthesis: 
+**b) Synthesis**: 
        i)   It consists of a synthesis script used for the design synthesis.
        ii)  Have the synthesis's power, timing, and area reports.
-c) UVM :
+**c) UVM :**
        i) It consists of the UVM components required for the functional verification of the design.
        ii) Have the results in the results.txt for observation and analysis.
        iii) Check the readme file in that dir for more information.
-d) Specifications.pdf: Have the specifications of the 128 Point DIT FFT.
+**d) Specifications.pdf:** Have the specifications of the 128 Point DIT FFT.
 
 
 
