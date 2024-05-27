@@ -1,3 +1,4 @@
+// Interface for connecting the DUT and the Environment Virtually..
 interface intf_Driver_DUT (input clk,input reset);
 
 	logic push_in;
