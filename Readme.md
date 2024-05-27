@@ -1,7 +1,3 @@
-***************************  Read Me for Design  *******************
-
-=>  This is a Design Directory consisting of "DESIGN.sv", "complex_multiplier.sv", "fftw.sv", "new_data_types.sv"
-
  /// ------------------------------------------------         Specifications  --------------------------------------------- //
 
  => It is a 128 point FFT for supporting OFDM Communications.
