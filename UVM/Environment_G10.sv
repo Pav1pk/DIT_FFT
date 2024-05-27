@@ -1,3 +1,18 @@
+/*
+-------------------------------------------------------------------------------------------------------
+-> This is an Environemnt, extending uvm_environemnt.
+
+-> This agent builds: 
+					i)    a  Score Board
+					ii)   an Active Agent Block [Driver + IFFT boxes]
+					iii)  a Passive Agent Blockk [Reference FFT Boxes]
+
+-> Connnects :
+			i)   The Monitors in the Agents with the scoreboard.
+
+-------------------------------------------------------------------------------------------------------
+*/
+
 class Environment_G10 extends  uvm_env;
 	`uvm_component_utils (Environment_G10)
 
