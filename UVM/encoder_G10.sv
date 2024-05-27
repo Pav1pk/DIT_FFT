@@ -1,3 +1,15 @@
+/*
+--------------------------------------------------------------------------------------------
+-> It is an encoder box, which extends "uvm_scoreboard".
+-> This box conists fot two ports , 
+                i)  The tlm analysis fifo for receiving the sequence item message from the driver.
+                ii)  The analysis port for sending 128 floating point frequency bins to the bit reversal block.
+
+-> This encoder receives the 48 bits and encodes them into corresponding 128 frequency bins, which is of the datatype: "points_128".
+-> These 128 frequency bins are passed to the bit reversal box.
+-----------------------------------------------------------------------------------------------
+*/
+
 class encoder_G10 extends uvm_scoreboard;
     `uvm_component_utils (encoder_G10)
 
