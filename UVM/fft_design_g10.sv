@@ -1,3 +1,30 @@
+/*
+------------------------------------------------------------------------------------------------------------------------------------------
+-> This is an FFT block acts as a "reference Model", which extends uvm_scoreboard for computing the butterfly operation.
+
+-> It has two ports:
+			i)   tlm anlaysis fifo port for collecting the 128 points from the Bit Reversal.
+			ii)  analysis port for sending the 7 stage butterfly 128 floating frequency bins output to the Decoder. 
+
+-> User defined Data types: point, points_128 , check these in the included files. for their definition
+
+-> This block consists of task "fft_model", which takes 128 flaoting point frequency bins as input and output.
+
+-> There is a function "fft_twiddle", which gives the twiddle factor according to the level and k, by : index = k<<(6-Level), which
+is used in the butterfly computation.
+
+-> There are three other function for performing complex multiplication, addition, subtraction, these takes two frequency bins points and give
+two frequency bins poins ad outputs after mathematical operation.
+
+-> The while loop, iterates all the 128 points in a single level, and the outer for loop runs for 7 times covering each level.
+
+-> The inner for loop iterates over each set, by calling certain points at certain level and certain spread (k).
+
+-> Then the output  sent to the Decoder Block.
+-------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
 class fft_design_g10 extends uvm_scoreboard;
 	`uvm_component_utils (fft_design_g10)
 
