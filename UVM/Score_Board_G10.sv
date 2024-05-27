@@ -1,3 +1,22 @@
+------------------------------------------------------------------------------------------------------------------------------------
+-> This is a ScoreBoard , extending the uvm_scoreboard. For comparing the received bits from two monitors.
+
+-> It has two ports:
+			i)  tlm_anlaysis_fifo port for collecting the 48 bits from the reference monitor.
+			ii) tlm_anlaysis_fifo port for collecting the 48 bits from the Dut Monitor.
+
+-> The data received in these ports are written into two queues.
+
+-> Whenever the queue atleast has one element, it is checked and compared are they same or nor.
+
+-> If the data matched, go ahead for next sequence.
+
+-> If a data is not matched, uvm_error is reported, and error count is increased.
+
+-> Once the error count reaches max_error_count, simualtion is stopped and a uvm_fatal is reported.
+
+------------------------------------------------------------------------------------------------------------------------------------
+*/
 class Score_Board_G10 extends  uvm_scoreboard;
 	`uvm_component_utils (Score_Board_G10)
 	uvm_cmdline_processor c1;
