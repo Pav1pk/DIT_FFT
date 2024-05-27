@@ -1,3 +1,27 @@
+/*
+------------------------------------------------------------------------------------------------------------------
+-> This is a driver class for driving the signals to the reference model and Device Under Test.
+->It has 5 extra ports in total, 2 tlm analysis fifo, 3 analysis ports.
+
+-> User defined Data types: point, points_128 , check these in the included files. for their definition
+
+-> The analysis ports are used for 
+						i) 		sending the sequence item's (msg) 48 bits to the encoder box.
+						ii) 	sending the 128 floating points from the IFFT box to the Real_to_fixed_conversion box.
+						iii) 	sending the 128 floating points from the IFFT box to the Reference FFT box's bit reversal.
+
+-> The tlm analysis fifo ports are used for:
+						i)     collecting the 128 floating points from the IFFT Box
+						ii)    collecting the 128 fixed points from the Real_to_fixed_conversion box.
+
+-> A Virtual Interface for connecting the global interface, which was set in the Top Module 
+
+->  The task "drive_point" is used for passing the 128 fixed points sequentially to the DUT.
+
+-> After completely sending the 128 points, it asks for the next sequence to the sequence_class.
+---------------------------------------------------------------------------------------------------------------------
+*/
+
 class driver_G10 extends  uvm_driver #(sequence_item_G10);
 `uvm_component_utils (driver_G10)
 
