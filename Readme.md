@@ -26,11 +26,24 @@
  => For 7 levels it takes 16*7 = 112 clocks for completing butterfly operation.
 
 // --------------------------------------------------------------------------------------------------------------------- //
+This repository consists of:
+-> Design_Files
+-> Synthesis
+-> UVM
+-> Specifications.pdf
 
-The dir: new_data_types.sv     : declaration of all the data types used in the design for accessing the 128 points with ease
-         fftw.sv               : the twiddle factors required for all the levels
-         complex_multiplier.sv : The complex multiplier which takes 2 complex points, 1 twiddle factor (complex) and gives two output points (complex)
-         DESIGN.sv             : The Design for the FFT. 
+a) Design Files : 
+       i)   It consists of all the files required for a working design.
+       ii)  Check the Design's readme for functionality.
+b) Synthesis: 
+       i)   It consists of a synthesis script used for the design synthesis.
+       ii)  Have the synthesis's power, timing, and area reports.
+c) UVM :
+       i) It consists of the UVM components required for the functional verification of the design.
+       ii) Have the results in the results.txt for observation and analysis.
+       iii) Check the readme file in that dir for more information.
+d) Specifications.pdf: Have the specifications of the 128 Point DIT FFT.
+
 
 
 *********************************************************************************************************************************
