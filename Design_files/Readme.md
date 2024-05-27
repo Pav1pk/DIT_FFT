@@ -11,4 +11,5 @@ DESIGN.sv: The Design for the FFT.
 
 // ------------------------------------------------------------------------------------------------------------------- //
 
-**new_data_types.sv** <br/> hello
+**new_data_types.sv** <br/> It consists of all the data type declaration for smooth data transfer and easy debug <br/> "fixed_point" for holding data of each point in 8-15 format. <br/> "fixed_128_point" for holding the 128 fixed_point together. 
+
